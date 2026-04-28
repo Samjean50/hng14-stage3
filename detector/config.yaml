@@ -1,0 +1,44 @@
+log_path: /var/log/nginx/hng-access.log
+
+# Sliding window duration in seconds
+window_seconds: 60
+
+# Baseline rolling window in minutes
+baseline_window_minutes: 30
+
+# Baseline recalculation interval in seconds
+baseline_recalc_interval: 60
+
+# Anomaly detection thresholds
+zscore_threshold: 3.0
+rate_multiplier_threshold: 5.0
+
+# Error surge threshold
+error_surge_multiplier: 3.0
+
+# Auto-unban backoff schedule in minutes
+unban_schedule: [10, 30, 120]
+
+# Dashboard
+dashboard_port: 8080
+dashboard_refresh_seconds: 3
+
+# Audit log path
+audit_log_path: /var/log/detector-audit.log
+
+# Baseline floor values — prevents division by zero on cold start
+baseline_floor_mean: 1.0
+baseline_floor_stddev: 0.5
+
+slack:
+  webhook_url: ""  # overridden by environment variable
+
+# IPs that should never be banned
+allowlist:
+  - "127.0.0.1"
+  - "172.31.72.252"  # your server's private IP
+
+# IPs that should never be banned
+allowlist:
+  - "127.0.0.1"
+  - "172.31.72.252"
