@@ -258,7 +258,7 @@ unban_schedule: [10, 30, 120]   # auto-unban backoff in minutes
 dashboard_port: 8080            # dashboard port
 baseline_floor_mean: 1.0        # minimum baseline mean
 baseline_floor_stddev: 0.5      # minimum baseline stddev
-allowlist:                      # IPs that are never banned
+allowlist:                      # IPs that are never banned##
   - "127.0.0.1"
   - "172.31.72.252"
 ```
@@ -297,3 +297,6 @@ Configure by setting `SLACK_WEBHOOK_URL` in your `.env` file.
 ## GitHub Repository
 
 https://github.com/Samjean50/hng14-stage3-devops
+
+## Blog Post
+https://medium.com/@samson.bakare50/how-i-built-a-real-time-ddos-detection-engine-from-scratch-e30b83725cca
